@@ -85,5 +85,4 @@ class CryptoTrendScreenerJob:
         swing_weekly_trends.to_excel(writer, sheet_name="Swing W trends", index=False)
         swing_monthly_trends.to_excel(writer, sheet_name="Swing M trends", index=False)
 
-        # writer.save()
         writer.close()

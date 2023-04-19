@@ -12,7 +12,7 @@
   - [x] Configure build
   - [x] Upload to GitHub
 - [x] Implemented app logic
-- [] Codecheck by static control
-- [] Unit/integration tests
+- [x] Codecheck by static control
+- [x] Unit/integration tests
 - [] Wrote documentation (README file, deploy documentation)
 - [] Release version
