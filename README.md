@@ -2,7 +2,7 @@
 
 
 ## TODOs
-- [] Created project structure
+- [x] Created project structure
   - [x] Prepare template for source code
   - [x] Configure logger
   - [x] Configure makefile
@@ -11,7 +11,7 @@
   - [x] Define dependencies
   - [x] Configure build
   - [x] Upload to GitHub
-- [] Implemented app logic
+- [x] Implemented app logic
 - [] Codecheck by static control
 - [] Unit/integration tests
 - [] Wrote documentation (README file, deploy documentation)

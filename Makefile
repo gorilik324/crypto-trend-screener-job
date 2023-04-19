@@ -26,7 +26,7 @@ help:
 	@echo "------------------------------------"
 
 prepare:
-	@echo "Prepaparing ..."
+	@echo "Preparing ..."
 	${PYTHON} -m venv venv
 	. venv/bin/activate && ${PYTHON} -m pip install -U pip wheel setuptools
 	. venv/bin/activate && pip install -r requirements.txt
