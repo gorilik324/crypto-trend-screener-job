@@ -81,6 +81,10 @@ class CryptoTrendScreenerJob:
         filename = "CryptoTrendScreener_" + now + ".xlsx"
         writer = pd.ExcelWriter(filename, engine="openpyxl")
 
+        intraday_daily_trends["ticker"] = "BYBIT:" + intraday_daily_trends["ticker"] + ".P"
+        swing_weekly_trends["ticker"] = "BYBIT:" + swing_weekly_trends["ticker"] + ".P"
+        swing_monthly_trends["ticker"] = "BYBIT:" + swing_monthly_trends["ticker"] + ".P"
+
         intraday_daily_trends.to_excel(writer, sheet_name="Intraday D trends", index=False)
         swing_weekly_trends.to_excel(writer, sheet_name="Swing W trends", index=False)
         swing_monthly_trends.to_excel(writer, sheet_name="Swing M trends", index=False)
