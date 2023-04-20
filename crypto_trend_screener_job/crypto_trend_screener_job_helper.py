@@ -16,6 +16,13 @@ class CryptoTrendScreenerJobHelper:
         response = self.pybit_client.get_kline(category=self.CATEGORY, symbol=ticker, interval=time_frame)
         ohlc = pd.DataFrame(response["result"]["list"],
                             columns=["startTime", "open", "high", "low", "close", "volume", "turnover"])
+
+        ohlc["open"] = pd.to_numeric(ohlc["open"])
+        ohlc["high"] = pd.to_numeric(ohlc["high"])
+        ohlc["low"] = pd.to_numeric(ohlc["low"])
+        ohlc["close"] = pd.to_numeric(ohlc["close"])
+        ohlc["volume"] = pd.to_numeric(ohlc["volume"])
+        ohlc["turnover"] = pd.to_numeric(ohlc["turnover"])
         ohlc["startTime"] = pd.to_numeric(ohlc["startTime"])
         ohlc['startTime'] = pd.to_datetime(ohlc["startTime"], unit='ms')
         return ohlc
@@ -42,8 +49,8 @@ class CryptoTrendScreenerJobHelper:
     def calculate_percentage_change(ohlc, days):
         count_days = ohlc.shape[0] - 1
 
-        actual_price = float(ohlc.loc[0]["close"])
-        old_price = float(ohlc.loc[days]["open"]) if days < count_days else float(ohlc.loc[count_days]["open"])
+        actual_price = ohlc.loc[0]["close"]
+        old_price = ohlc.loc[days]["open"] if days < count_days else ohlc.loc[count_days]["open"]
 
         return round(((actual_price - old_price) / old_price) * 100, 2)
 
