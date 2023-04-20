@@ -1,18 +1,49 @@
 # crypto-trend-screener-job
+Application for searching the intraday, swing trends on the USDT perpetual futures markets of the Bybit exchange.
+
+# About
+Batch job looking for trends across the USDT perpetual futures market on the Bybit exchange.
+The application recognizes intraday trends based on the D chart, swing trends based on the W and M charts.
+The output of the program is an excel file.
+
+## Development
+Application is actively maintenance and develop.
+
+## Installation
+```commandline
+make clean
+make prepare
+```
+
+## Usage
+**Run job**
+```commandline
+make run
+libreoffice CryptoTrendScreener_YYYYMMDD.xlsx
+```
+
+**Find trade opportunities (example intraday)**
+* Long
+  * Otevri list Intraday D trends
+  * Serad si radky od trhu ktere nejvice rostly dle sloupecku Change 7 days, %
+  * Vyfiltruj si trhy dle kontextu (Up-trend, Start rotation after up-trend) 
+
+* Short
+  * Otevri list Intraday D trends
+  * Serad si radky od trhu ktere nejvice klesaly dle sloupecku Change 7 days, %
+  * Vyfiltruj si trhy dle kontextu (Up-trend, Start rotation after up-trend) 
 
 
-## TODOs
-- [x] Created project structure
-  - [x] Prepare template for source code
-  - [x] Configure logger
-  - [x] Configure makefile
-  - [x] Create gitignore
-  - [x] Create Licence file
-  - [x] Define dependencies
-  - [x] Configure build
-  - [x] Upload to GitHub
-- [x] Implemented app logic
-- [x] Codecheck by static control
-- [x] Unit/integration tests
-- [] Wrote documentation (README file, deploy documentation)
-- [] Release version
+## Contact
+You can reach out for support on the [GeorgeQuantAnalyst](https://t.me/GeorgeQunatAnalyst) telegram chat.
+
+## Contributors
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+     <td align="center"><a href="https://github.com/GeorgeQuantAnalyst"><img src="https://avatars.githubusercontent.com/u/112611533?v=4" width="100px;" alt=""/><br /><sub><b>GeorgeQuantAnalyst</b></sub></a><br /><a href="https://github.com/GeorgeQuantAnalyst" title="Ideas">🤔</a></td>
+    <td align="center"><a href="https://github.com/LucyQuantAnalyst"><img src="https://avatars.githubusercontent.com/u/115091833?v=4" width="100px;" alt=""/><br /><sub><b>LucyQuantAnalyst</b></sub></a><br /><a href="https://github.com/LucyQuantAnalyst" title="Code">💻</a></td>
+  </tr>
+</table>

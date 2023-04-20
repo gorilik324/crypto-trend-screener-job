@@ -1,0 +1,15 @@
+## TODOs
+- [x] Created project structure
+  - [x] Prepare template for source code
+  - [x] Configure logger
+  - [x] Configure makefile
+  - [x] Create gitignore
+  - [x] Create Licence file
+  - [x] Define dependencies
+  - [x] Configure build
+  - [x] Upload to GitHub
+- [x] Implemented app logic
+- [x] Codecheck by static control
+- [x] Unit/integration tests
+- [x] Wrote documentation (README file)
+- [] Release version
