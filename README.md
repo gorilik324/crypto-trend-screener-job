@@ -24,14 +24,14 @@ libreoffice CryptoTrendScreener_YYYYMMDD.xlsx
 
 **Find trade opportunities (example intraday)**
 * Long
-  * Otevri list Intraday D trends
-  * Serad si radky od trhu ktere nejvice rostly dle sloupecku Change 7 days, %
-  * Vyfiltruj si trhy dle kontextu (Up-trend, Start rotation after up-trend) 
+  * Open the sheet "Intraday D trends"
+  * Sort by the market that grew the most by colum "Change 7 days, %"
+  * Filter markets by context (Up-trend, Start rotation after up-trend) 
 
 * Short
-  * Otevri list Intraday D trends
-  * Serad si radky od trhu ktere nejvice klesaly dle sloupecku Change 7 days, %
-  * Vyfiltruj si trhy dle kontextu (Up-trend, Start rotation after up-trend) 
+  * Open the sheet "Intraday D trends"
+  * Sort by the market that decline the most by colum "Change 7 days, %"
+  * Filter markets by context (Up-trend, Start rotation after up-trend) 
 
 
 ## Contact
