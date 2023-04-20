@@ -12,4 +12,4 @@
 - [x] Codecheck by static control
 - [x] Unit/integration tests
 - [x] Wrote documentation (README file)
-- [] Release version
+- [x] Release version
