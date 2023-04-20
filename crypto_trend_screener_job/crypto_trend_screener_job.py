@@ -78,7 +78,7 @@ class CryptoTrendScreenerJob:
     @staticmethod
     def save_result_to_excel(intraday_daily_trends, swing_weekly_trends, swing_monthly_trends):
         now = datetime.now().strftime("%Y%m%d")
-        filename = "CryptoTrendScreener_" + now + ".xlsx"
+        filename = "report/CryptoTrendScreener_" + now + ".xlsx"
         writer = pd.ExcelWriter(filename, engine="openpyxl")
 
         intraday_daily_trends["ticker"] = "BYBIT:" + intraday_daily_trends["ticker"] + ".P"
